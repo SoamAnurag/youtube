@@ -1,0 +1,83 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"SMSReceive\"><param name=\"android-package\" value=\"com.andreszs.smsreceive.SMSReceive\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SMSReader\"><param name=\"android-package\" value=\"io.github.rajeevs1992.smsreader.SMSReader\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.READ_SMS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.RECEIVE_SMS\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.SEND_SMS\" />",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-sms-receive": {
+      "PACKAGE_NAME": "com.smsRecive.dev"
+    },
+    "cordova-sms-reader": {
+      "PACKAGE_NAME": "com.smsRecive.dev"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-sms-receive.SMSReceive",
+      "file": "plugins/cordova-plugin-sms-receive/www/SMSReceive.js",
+      "pluginId": "cordova-plugin-sms-receive",
+      "clobbers": [
+        "cordova.plugins.SMSReceive"
+      ]
+    },
+    {
+      "id": "cordova-sms-reader.smsreader",
+      "file": "plugins/cordova-sms-reader/www/smsreader.js",
+      "pluginId": "cordova-sms-reader",
+      "clobbers": [
+        "smsreader"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-sms-receive": "2.0.0",
+    "cordova-sms-reader": "0.0.3"
+  }
+}

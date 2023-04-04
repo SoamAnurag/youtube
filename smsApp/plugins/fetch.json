@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-sms-receive": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-sms-receive"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-sms-reader": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-sms-reader"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
