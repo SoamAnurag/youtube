@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width" />
+    <title>S C S</title>
+    <link rel="stylesheet" href="jquery1.3/jquery.mobile-1.4.3.min.css" type="text/css" />
+    <script src="jquery1.3/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="jquery1.3/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="jquery1.3/jquery.mobile-1.3.0-rc.1.min.css" />-->
+    <link href="jquery1.3/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <!-- <script type="text/javascript" charset="utf-8" src="cordova-2.3.0_Android.js"></script>
+      <script type="text/javascript" charset="utf-8" src="cordova-2.3.0_IOS.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/telephonenumber.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/GCMPlugin.js"></script>
+    <script src="js/SharedDataPlugin.js" type="text/javascript"></script> -->
+    <!-- <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="jquery1.3/jquery.mobile-1.3.0-rc.1.min.js" type="text/javascript"></script>-->
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/scs.main.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <script src="js/share.js" type="text/javascript"></script>
+    <script src="js/dtpkrjs/DateTimePicker.js" type="text/javascript"></script>
+    <script src="js/dtpkrjs/datepicker_ele.js" type="text/javascript"></script>
+    <script src="js/dtpkrjs/mobiscroll.js" type="text/javascript"></script>
+    <!--<link href="calendar/mobiscroll-2.3.1.custom.min.css" rel="stylesheet" type="text/css" />
+    <script src="calendar/mobiscroll-2.3.1.custom.min.js" type="text/javascript"></script>-->
+    <!--    <script src="js/energize.js" type="text/javascript"></script> -->
+    <script src="js/sms.js" type="text/javascript"></script>
+    <script src="js/email.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/SocialSharing.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/PushNotification.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/AdMobPlugin.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/childbrowser.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/RightMenuBar.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/ShareCases.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/Stackeholder.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/DroupMenubar.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/notes.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/analytics.js"></script>
+    <!-- refer to GAPI directly -->
+    <script type="text/javascript" charset="utf-8" src="https://apis.google.com/js/client.js"></script>
+    <!--  <script type="text/javascript" src="js/LocalNotification.js"></script>
+     <script type="text/javascript" src="js/LocalNotificationIOS.js"></script> -->
+    <link href="css/dtpkrcss/mobiscroll.css" rel="stylesheet" type="text/css" />
+    <!-- Date Picker -->
+    <link href="css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+    <!-- Daterange picker -->
+    <link href="css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet"
+          type="text/css" />
+    <link href="css/html_elements.css" rel="stylesheet" type="text/css" />
+    <!-- daterangepicker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <!-- datepicker -->
+    <script src="js/plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/calendar/lib/picker.js"></script>
+    <script type="text/javascript" src="js/calendar/lib/picker.date.js"></script>
+    <script type="text/javascript" src="js/calendar/lib/picker.time.js"></script>
+    <script type="text/javascript" src="js/calendar/lib/legacy.js"></script>
+    <script type="text/javascript" src="js/calendar/demo/scripts/demo.js"></script>
+    <script type="text/javascript" src="js/calendar/demo/scripts/rainbow.js"></script>
+    <style type="text/css">
+        .elem {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 0px;
+            left: 55px;
+            -webkit-transition-property: -webkit-transform;
+            -webkit-transition-duration: 1s;
+            -moz-transition-property: -moz-transform;
+            -moz-transition-duration: 1s;
+            -webkit-animation-name: rotate;
+            -webkit-animation-duration: 1s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-animation-name: rotate;
+            -moz-animation-duration: 1s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+        }
+
+        @-webkit-keyframes rotate {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes rotate {
+            from {
+                -moz-transform: rotate(0deg);
+            }
+
+            to {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        #extraInfo {
+            position: fixed;
+            bottom: -75px;
+            width: 100%;
+            height: 75px;
+            z-index: 1;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            text-shadow: 0 -1px 0 #000;
+            background-image: -webkit-linear-gradient( #3c3c3c,#111 );
+        }
+    </style>
+    <script type="text/javascript">
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+            //alert("called");
+            //FastClick.attach(document.body);
+
+
+        }
+        function minimizeMEProgress() {
+            $.mobile.activePage.find('#currentProgress').hide();
+            //$('#overlay').fadeOut();
+        }
+        function closeME() {
+            $('#validityPopUp').fadeOut();
+            //$('#overlay').fadeOut();
+        }
+        function minimizeME() {
+            if ($('#validityPopUp').hasClass('validityPopUp')) {
+                $('#validityPopUp').removeClass('validityPopUp');
+                $('#validityPopUp').addClass('validityMin');
+                $('#validityPopUp').css({ 'top': '' });
+                //$('#overlay').fadeOut();
+            }
+            else {
+                //$('#overlay').fadeIn();
+                $('#validityPopUp').removeClass('validityMin');
+                $('#validityPopUp').addClass('validityPopUp');
+                var screenH = $(window).height() / 3;
+                var headerH = $('.header').height() + 60;
+                // alert(headerH);
+                $('#validityPopUp').css({ height: screenH, top: headerH + 'px' });
+            }
+        }
+
+    </script>
+</head>
+<body onload="onLoad()">
+
+    <!-- /page -->
+    <div data-role="page" id="advanceSearch">
+        <!--<div data-role="header" data-theme="a" data-position="fixed">
+            <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                <ul>
+                    <li><a href="#casePage" id="goBack" data-icon="custom" data-direction="reverse" data-corners="false"
+                        data-shadow="false" data-direction="reverse" data-transition="slide">Back</a></li>
+                    <li><a href="#" id="refresh" data-icon="false" data-corners="false" data-shadow="false"
+                        onclick="syncCases()">Refresh
+                        <img id="syncImage" class="sync elem" src="sync.png" alt="Sync" style="width: 25px;
+                            height: 25px; position: absolute; top: -25px; left: 10px;" onclick="syncCases()" />
+                    </a></li>
+                    <li><a href="#" id="scs" data-icon="false" style="cursor: default;">SCS</a></li>
+                    <li><a href="#advanceSearch" id="search" data-icon="custom" data-transition="slide"
+                        data-corners="false" data-shadow="false">Search</a></li>
+                    <li><a href="#rightMenuadvanceSearch" id="searchMenu" data-icon="custom" data-direction="reverse"
+                        data-corners="false" data-shadow="false">Menu</a></li>
+                </ul>
+            </div>
+        </div>-->
+        <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="index.html#casePage" id="goBack" data-direction="reverse" data-corners="false"
+                           data-shadow="false" data-icon="back">Back</a>
+                    </li>
+                    <!-- <li><a href="#" data-icon="star" class="ui-btn-active">Refresh</a></li>-->
+                    <li>
+                        <a href="#" id="A1" data-corners="false" data-shadow="false" onclick="syncCases()"
+                           data-icon="refresh">Refresh</a>
+                    </li>
+                    <li><a id="scsHome" data-corners="false" href="index.html" data-icon="home">SCS</a></li>
+                    <li>
+                        <a href="advanceSearch.html" id="A4" data-transition="slide" data-corners="false"
+                           data-shadow="false" data-icon="search">Search</a>
+                    </li>
+                    <li>
+                        <a href="#rightMenuadvanceSearch" id="searchMenu" data-direction="reverse" data-corners="false"
+                           data-shadow="false" data-icon="grid">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="validity" data-role="header" data-theme="a" data-position="fixed">
+            <div class="note1">
+                <span id="serverEpoch" style="padding: 5px 0px 5px 15px;"></span>
+            </div>
+        </div>
+        <div data-role="content">
+            <center>
+                <span style="font-weight: bold; font-size: 16px;">Advance Search</span>
+            </center>
+            <center>
+                <div id="search_string_Data">
+                    <center>
+                        <h4>
+                            <b>Search by Case Number, Party Name, Case status, list name, Date Or Justice Name. ff</b>
+                        </h4>
+                        <input type="search" name="search" id="search1" value="" />
+                    </center>
+                </div>
+                <div>
+                    <label>
+                        Start Date
+                    </label>
+<!--                    <input name="start_date" id="start_date" type="text" data-field="date" class="date_picker_textbox form-control" readonly>-->
+                    <input name="start_date" id="start_date_a" type="text" placeholder="dd/mm/yyyy" style="text-align: center" class="date_picker_textbox form-control">
+                </div>
+                <div>
+                    <label>
+                        End Date
+                    </label>
+                    <!--<input name="end_date" id="end_date" type="text" data-field="date" class="date_picker_textbox form-control" readonly>-->
+                    <input name="end_date" id="end_date_a" type="text" placeholder="dd/mm/yyyy" style="text-align: center" class="date_picker_textbox form-control">
+                </div>
+            </center>
+            <div class="ui-body ui-body-a">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <input type="button" data-theme="a" onclick="return putAdvanceSearchData()" value="Search" />
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#casePage" data-role="button" data-direction="reverse" data-theme="b" data-transition="slide">
+                            Cancel
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" style="max-width: 400px;
+            z-index: 2147483638 !important" class="ui-corner-all">
+            <div data-role="header" data-theme="a" class="ui-corner-top">
+                <center>
+                    <h4>
+                        Fetch data from web?
+                    </h4>
+                </center>
+            </div>
+
+        </div>
+
+        <!-- Right Menu Panel -->
+        <div data-role="panel" id="rightMenuadvanceSearch" data-display="reveal" data-theme="a"
+             data-position="right" data-dismissible="true" data-position-fixed="true" class="casePageFixedLeftPanel"
+             data-animate="true" data-swipe-open="true">
+        </div>
+        <!-- /Right Menu Panel -->
+
+    </div>
+    <!--Lawyer Names Page-->
+    <!--/Lawyer Names Page-->
+
+</body>
+</html>

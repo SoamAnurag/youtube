@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>S C S</title>
+    <link rel="stylesheet" href="jquery1.3/jquery.mobile-1.4.3.min.css" type="text/css" />
+    <script src="jquery1.3/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="jquery1.3/jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="jquery1.3/jquery.mobile-1.3.0-rc.1.min.css" />-->
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <!-- <script src="jquery1.3/jquery.mobile-1.3.0-rc.1.min.js" type="text/javascript"></script>-->
+    <!-- <script src="js/energize.js" type="text/javascript"></script> -->
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <script type="text/javascript" src="js/scs.main.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
+    <link href="calendar/mobiscroll-2.3.1.custom.min.css" rel="stylesheet" type="text/css" />
+    <script src="calendar/mobiscroll-2.3.1.custom.min.js" type="text/javascript"></script>
+    <link href="jquery1.3/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="utf-8" src="js/RightMenuBar.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/ShareCases.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/Stackeholder.js"></script>
+</head>
+<body>
+    
+    <div data-role="page" id="lawyerNames">
+        <!--<div data-role="header" data-theme="a" data-position="fixed">
+            <div data-role="navbar" class="nav-glyphish-example" data-grid="d">
+                <ul>
+                    <li><a href="#casePage" id="goBack" data-icon="custom" data-direction="reverse" data-corners="false"
+                        data-shadow="false" data-direction="reverse" data-transition="slide">Back</a></li>
+                    <li><a href="#" id="refreshLawyers" data-icon="false" data-corners="false" data-shadow="false"
+                        onclick="initializeMyAccount('search')">Refresh
+                        <img id="Img1" class="lawyers" src="sync.png" alt="Sync" style="width: 25px; height: 25px;
+                            position: absolute; top: -25px; left: 10px;" />
+                    </a></li>
+                    <li><a href="#" id="scsLawyer" data-icon="false" style="cursor: default;">SCS</a></li>
+                    <li><a href="#advanceSearch" id="search" data-icon="custom" data-transition="slide"
+                        data-corners="false" data-shadow="false">Search</a></li>
+                    <li><a href="#rightMenulawyerNames" id="lawyerMenu" data-icon="custom" data-direction="reverse"
+                        data-corners="false" data-shadow="false" class="ui-cls-margin">Menu</a></li>
+                </ul>
+            </div>
+        </div>-->
+        <div data-role="header" data-theme="b" data-position="fixed" data-tap-toggle="false">
+            <div data-role="navbar">
+                <ul>
+                    <li>
+                        <a href="index.html#casePage" id="goback" data-direction="reverse" data-corners="false"
+                           data-shadow="false" data-icon="back">Back</a>
+                    </li>
+                    <li><a id="scsHome" data-corners="false" href="index.html#casePage" data-icon="home">SCS</a></li>
+                    <li>
+                        <a href="#rightMenulawyerNames" id="caseNumberMenu" data-direction="reverse"
+                           data-corners="false" data-shadow="false" data-icon="grid">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="validity" data-role="header" data-theme="a" data-position="fixed">
+            <div class="note3">
+                <span class="innerSpan">
+                    <img src="images/icons/ic_action_green_sphere.png" />Approved
+                </span> <span class="innerSpan">
+                    <img src="images/icons/ic_action_red_sphere.png" />Del Request
+                </span> <span class="innerSpan">
+                    <img src="images/icons/ic_action_gold_sphere.png" />Add Request
+                </span>
+            </div>
+        </div>
+        <div data-role="content">
+            <center>
+                <span style="font-weight: bold; font-size: 16px;">Lawyer Names</span>
+            </center>
+            <br />
+            <center>
+                <ul data-role="listview" data-filter="false" data-inset="true">
+                    <li data-role="list-divider" data-theme="b">Add New Lawyer Name</li>
+                    <li>
+                        <div class="addSearchString">
+                            <!--<div data-role="fieldcontain">
+                                <label for="txt_new_string" id="ui-st-label2">
+                                    New Lawyer Name</label>
+                                <input name="txt_new_string" id="txt_new_string" type="text" placeholder="Example: Ashok Kumar Chaudhary,Ashok k. Chaudary, Ashok Chaudhary, A. K. Chaudhary, A. K. Chaudhary" />
+                            </div>-->
+                            <div class="ui-field-contain">
+                                <label for="text-12">
+                                    New Lawyer Name
+                                </label>
+                                <!--<input type="text" name="text-12" id="text-12" value="">-->
+                                <input name="txt_new_string" id="txt_new_string" type="text" placeholder="Example: Ashok Kumar Chaudhary,Ashok k. Chaudary, Ashok Chaudhary, A. K. Chaudhary, A. K. Chaudhary" />
+                            </div>
+                            <a href="#" data-role="button" data-theme="a" style="width: 98%;" onclick="addNewString();">
+                                Add New
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </center>
+            <br />
+            <ul data-role="listview" data-filter="false" data-filter-placeholder="Search..."
+                data-inset="true" class="list_inset_1">
+                <li data-role="list-divider" data-theme="b">Existing Lawyer Names</li>
+                <li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-d ui-li-has-count">
+                    <i>Note: Tap Lawyer Name To Delete</i>
+                </li>
+                <li>
+                    <div class="search_opt">
+                        <input type="text" name="search" id="searchMyAccount" value="" data-inline="true"
+                               placeholder="Search for content..." class="ui-my-imput" />
+                        <div class="search_btn">
+                            <a href="#" data-role="button" data-icon="search" data-iconpos="notext" data-theme="c"
+                               data-inline="true" onclick="searchMyAccount()"></a>
+                        </div>
+                    </div>
+                    <div class="searchDiv">
+                        <ul data-role="listview" id="myAccountSearchList" class="list_inset_1" data-inset="true"></ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="paging">
+                <div class="paging_left">
+                    <a href="#" data-role="button" data-icon="arrow-l" data-iconpos="notext" data-theme="c"
+                       data-inline="true" id="prev"></a>
+                </div>
+                <div class="paging_center">
+                </div>
+                <div class="paging_right">
+                    <a href="#" data-role="button" data-icon="arrow-r" data-iconpos="notext" data-theme="c"
+                       data-inline="true" id="next"></a>
+                </div>
+            </div>
+        </div>
+        <!-- /content -->
+        <div id="confirm" class="ui-content" data-role="popup" data-theme="none">
+            <p id="question">
+                Are you sure you want to delete
+            </p>
+            <span id="itemID" class="ui-itm-id"></span>
+            <div class="ui-grid-a" id="divConfirm">
+                <div class="ui-block-a">
+                    <a id="yes" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Yes</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="cancel" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Cancel</a>
+                </div>
+            </div>
+            <center>
+                <div id="divOk" class="ui-ok-div">
+                    <a id="ok" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back" data-inline="true">Got it !</a>
+                </div>
+            </center>
+        </div>
+        <div id="confirmChange" class="ui-content" data-role="popup" data-theme="none">
+            <p id="reqQuestion">
+                Are you sure you want to cancel request
+            </p>
+            <span id="reqItemID" class="ui-itm-rq"></span><span id="reqItemOP" class="ui-itm-rq">
+            </span>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="yesA" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Yes</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="noA" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <div id="confirmClear" class="ui-content" data-role="popup" data-theme="none">
+            <p id="clearQuestion">
+                Are you sure you want to clear all the case data
+            </p>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a id="clearYes" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Yes</a>
+                </div>
+                <div class="ui-block-b">
+                    <a id="clearNo" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
+                       data-rel="back">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <!-- /popup -->
+        <!-- Right Menu Panel -->
+        <div data-role="panel" id="rightMenulawyerNames" data-display="reveal" data-theme="a"
+             data-position="right" data-dismissible="true" data-position-fixed="true" class="casePageFixedLeftPanel"
+             data-animate="true" data-swipe-open="true">
+        </div>
+        <!-- /Right Menu Panel -->
+        <div id="currentProgress" class="currentProgress">
+            <!-- <div class="validHeaderProgress">
+
+                <div id="Div5" class="closeProgress">
+                    <a href="#" onclick="minimizeMEProgress()"></a></div>
+            </div>-->
+            <div class="validContent">
+                <p id="ProgressPara">
+                </p>
+                <!-- <progress id="ProgressAnimate" value="0" max="100">
+                  </progress>-->
+                <input type="range" name="slider-mini" id="slider-mini" min="0" max="100" data-highlight="true"
+                       data-mini="true" />
+            </div>
+        </div>
+    </div>
+    <!-- /page -->
+</body>
+</html>
