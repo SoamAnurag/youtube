@@ -10340,94 +10340,94 @@ $(document).on("pagebeforehide", function(e, data)
         PrevoisPageAll = data.prevPage[0].id;
     }
 });
-$(document).on("click", "#clearYes", function()
-{
-    $.mobile.loading('show',
-    {
-        text: 'Loading...',
-        textVisible: true,
-        theme: 'b',
-        textonly: false
-    });
-    db.transaction(function(tx)
-    {
-        tx.executeSql("SELECT * FROM user_settings;", [], function(tx, result)
-        {
-            try
-            {
-                if (result.rows.length > 0)
-                {
-                    var lawyer_id = result.rows.item(0).user_id;
-                    if (lawyer_id !== "")
-                    {
-                        var url = MR_URL;
-                        var port = '8111';
-                        var webMethod = protocal + url + '/WebService_andriod.asmx/clear_data';
-                        $.ajax(
-                        {
-                            type: "POST",
-                            url: webMethod,
-                            data: JSON.stringify(
-                            {
-                                lawyer_id: lawyer_id
-                            }),
-                            contentType: "application/json; charset=utf-8",
-                            dataType: "json",
-                            success: function(clearResponse)
-                            {
-                                try
-                                {
-                                    if (clearResponse.d === 'yes')
-                                    {
-                                        clearAllTables();
-                                    }
-                                    else
-                                    {
-                                        drawToast("Data not cleared. Please try again");
-                                    }
-                                    $.mobile.loading('hide');
-                                }
-                                catch (err)
-                                {
-                                    $.mobile.loading('hide');
-                                    var errMsg = err + "\nMethod: #clearYes(jquery) ajax" + "\nError Stack:" + err.stack;
-                                    insertErrorLogs(errMsg, function(id) {});
-                                }
-                            },
-                            error: function(XMLHttpRequest, textStatus, errorThrown)
-                            {
-                                $.mobile.loading('hide');
-                                var responseTime = new Date().getTime();
-                                var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: #clearYes(ajax call)";
-                                errMsg = errMsg + "\n App Version : " + version;
-                                insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
-                                calledBeforeSendAnyRequest(function(isConnected)
-                                {
-                                    if (isConnected)
-                                    {}
-                                });
-                            },
-                            beforeSend: function() {},
-                            complete: function() {}
-                        });
-                    }
-                }
-            }
-            catch (err)
-            {
-                $.mobile.loading('hide');
-                var errMsg = err + "\nMethod: #clearYes(jquery) tx1" + "\nError Stack:" + err.stack;
-                insertErrorLogs(errMsg, function(id) {});
-            }
-        }, function(err)
-        {
-            $.mobile.loading('hide');
-            var errMsg = "Error Code: " + err.code + "\nError Message: " + err.message + "\nMethod: #clearYes(executeSql)";
-            insertErrorLogs(errMsg, function(id) {});
-        });
-    }, errorCB, successCB);
-});
+//$(document).on("click", "#clearYes", function()
+//{
+//    $.mobile.loading('show',
+//    {
+//        text: 'Loading...',
+//        textVisible: true,
+//        theme: 'b',
+//        textonly: false
+//    });
+//    db.transaction(function(tx)
+//    {
+//        tx.executeSql("SELECT * FROM user_settings;", [], function(tx, result)
+//        {
+//            try
+//            {
+//                if (result.rows.length > 0)
+//                {
+//                    var lawyer_id = result.rows.item(0).user_id;
+//                    if (lawyer_id !== "")
+//                    {
+//                        var url = MR_URL;
+//                        var port = '8111';
+//                        var webMethod = protocal + url + '/WebService_andriod.asmx/clear_data';
+//                        $.ajax(
+//                        {
+//                            type: "POST",
+//                            url: webMethod,
+//                            data: JSON.stringify(
+//                            {
+//                                lawyer_id: lawyer_id
+//                            }),
+//                            contentType: "application/json; charset=utf-8",
+//                            dataType: "json",
+//                            success: function(clearResponse)
+//                            {
+//                                try
+//                                {
+//                                    if (clearResponse.d === 'yes')
+//                                    {
+//                                        clearAllTables();
+//                                    }
+//                                    else
+//                                    {
+//                                        drawToast("Data not cleared. Please try again");
+//                                    }
+//                                    $.mobile.loading('hide');
+//                                }
+//                                catch (err)
+//                                {
+//                                    $.mobile.loading('hide');
+//                                    var errMsg = err + "\nMethod: #clearYes(jquery) ajax" + "\nError Stack:" + err.stack;
+//                                    insertErrorLogs(errMsg, function(id) {});
+//                                }
+//                            },
+//                            error: function(XMLHttpRequest, textStatus, errorThrown)
+//                            {
+//                                $.mobile.loading('hide');
+//                                var responseTime = new Date().getTime();
+//                                var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: #clearYes(ajax call)";
+//                                errMsg = errMsg + "\n App Version : " + version;
+//                                insertLog(requestTime, responseTime, errMsg, function(returnId) {});
+//                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                                calledBeforeSendAnyRequest(function(isConnected)
+//                                {
+//                                    if (isConnected)
+//                                    {}
+//                                });
+//                            },
+//                            beforeSend: function() {},
+//                            complete: function() {}
+//                        });
+//                    }
+//                }
+//            }
+//            catch (err)
+//            {
+//                $.mobile.loading('hide');
+//                var errMsg = err + "\nMethod: #clearYes(jquery) tx1" + "\nError Stack:" + err.stack;
+//                insertErrorLogs(errMsg, function(id) {});
+//            }
+//        }, function(err)
+//        {
+//            $.mobile.loading('hide');
+//            var errMsg = "Error Code: " + err.code + "\nError Message: " + err.message + "\nMethod: #clearYes(executeSql)";
+//            insertErrorLogs(errMsg, function(id) {});
+//        });
+//    }, errorCB, successCB);
+//});
 $(document).on("click", "#yes", function()
 {
     var existID = $("#itemID").html();

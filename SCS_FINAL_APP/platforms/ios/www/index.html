@@ -131,6 +131,14 @@
             }
         }
     </script>
+    <style>
+        #popupDialog{
+            display: none!important;
+        }
+        #confirmClear{
+            display:none!important;
+        }
+    </style>
 </head>
 <body onload="onLoad()">
     <div class="ui-loader-background">
@@ -594,8 +602,7 @@
             z-index: 2147483638 !important" class="ui-corner-all">
             <div data-role="header" data-theme="a" class="ui-corner-top">
                 <center>
-                    <h4>
-                        Fetch data from web?</h4>
+                    <h4>Fetch data from web?</h4>
                 </center>
             </div>
             <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
@@ -606,20 +613,20 @@
                     data-theme="b" onclick="callSearchWebService()">Yes</a>
             </div>
         </div>
-        <div id="confirmClear" class="ui-content" data-role="popup" data-theme="none">
-            <p id="clearQuestion">
-                Are you sure you want to clear all the case data</p>
-            <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <a id="clearYes" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
-                        data-rel="back">Yes</a>
-                </div>
-                <div class="ui-block-b">
-                    <a id="clearNo" data-role="button" data-mini="true" data-shadow="false" data-theme="b"
-                        data-rel="back">Cancel</a>
-                </div>
-            </div>
-        </div>
+<!--        <div id="confirmClear" class="ui-content" data-role="popup" data-theme="none">-->
+<!--            <p id="clearQuestion">-->
+<!--                Are you sure you want to clear all the case data</p>-->
+<!--            <div class="ui-grid-a">-->
+<!--                <div class="ui-block-a">-->
+<!--                    <a id="clearYes" data-role="button" data-mini="true" data-shadow="false" data-theme="b"-->
+<!--                        data-rel="back">Yes</a>-->
+<!--                </div>-->
+<!--                <div class="ui-block-b">-->
+<!--                    <a id="clearNo" data-role="button" data-mini="true" data-shadow="false" data-theme="b"-->
+<!--                        data-rel="back">Cancel</a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <!-- Right Menu Panel -->
         <div data-role="panel" id="rightMenuadvanceSearch" data-display="reveal" data-theme="a"
             data-position="right" data-dismissible="true" data-position-fixed="true" class="casePageFixedLeftPanel"
