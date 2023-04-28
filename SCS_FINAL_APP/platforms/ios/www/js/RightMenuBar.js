@@ -82,19 +82,19 @@ $(document).on('panelbeforeopen', '#rightMenulawyerNames', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenulawyerNames").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenulawyerNames").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenulawyerNames").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenulawyerNames").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -111,19 +111,19 @@ $(document).on('panelbeforeopen', '#rightMenulogPage', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenulogPage").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenulogPage").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenulogPage").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenulogPage").trigger("updatelayout");
+//            }
         }
         $.mobile.activePage.find("#Logscollapsible").attr('data-collapsed', 'false');
         $.mobile.activePage.find("#rightMenulogPage").trigger("updatelayout");
@@ -142,19 +142,19 @@ $(document).on('panelbeforeopen', '#rightMenulawyerInfo', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenulawyerInfo").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenulawyerInfo").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenulawyerInfo").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenulawyerInfo").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -171,19 +171,19 @@ $(document).on('panelbeforeopen', '#rightMenucaseNumbers', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenucaseNumbers").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenucaseNumbers").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenucaseNumbers").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenucaseNumbers").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -200,19 +200,19 @@ $(document).on('panelbeforeopen', '#rightMenuadvanceSearch', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenuadvanceSearch").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenuadvanceSearch").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenuadvanceSearch").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenuadvanceSearch").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -229,19 +229,19 @@ $(document).on('panelbeforeopen', '#rightMenucasePage', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenucasePage").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenucasePage").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenucasePage").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenucasePage").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -299,19 +299,19 @@ $(document).on('panelbeforeopen', '#rightMenutermsandcondition', function (event
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenutermsandcondition").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenutermsandcondition").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenutermsandcondition").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenutermsandcondition").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -328,19 +328,19 @@ $(document).on('panelbeforeopen', '#rightMenushCrud', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenushCrud").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenushCrud").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenushCrud").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenushCrud").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -357,19 +357,19 @@ $(document).on('panelbeforeopen', '#rightMenuallSHList', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenuallSHList").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenuallSHList").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenuallSHList").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenuallSHList").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -386,19 +386,19 @@ $(document).on('panelbeforeopen', '#rightMenushMap', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenushMap").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenushMap").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenushMap").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenushMap").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -415,19 +415,19 @@ $(document).on('panelbeforeopen', '#rightMenusocialAccount', function (event) {
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenusocialAccount").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenusocialAccount").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenusocialAccount").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenusocialAccount").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -444,19 +444,19 @@ $(document).on('panelbeforeopen', '#rightMenusocialAccountNew', function (event)
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenusocialAccountNew").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenusocialAccountNew").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenusocialAccountNew").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenusocialAccountNew").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {
@@ -473,19 +473,19 @@ $(document).on('panelbeforeopen', '#rightMenunotificationList', function (event)
         if (PC_Status == "true") {
             var $currActivePanel = '#' + $.mobile.activePage.attr('id') + 'RightPanel';
             var $lawyerRightPanel = $.mobile.activePage.find($currActivePanel);
-            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-            if (listItem.length === 0 || listItem === 'undefined') {
-                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                $("#rightMenunotificationList").trigger("updatelayout");
-            }
+//            var listItem = $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//            if (listItem.length === 0 || listItem === 'undefined') {
+//                $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                $("#rightMenunotificationList").trigger("updatelayout");
+//            }
         }
         else {
-            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
-            if (listItem !== 'undefined' && listItem.length > 0) {
-                listItem.remove();
-                $($currActivePanel).listview("refresh");
-                $("#rightMenunotificationList").trigger("updatelayout");
-            }
+//            var listItem = $($currActivePanel).find("li:contains('Clear All Case Data')");
+//            if (listItem !== 'undefined' && listItem.length > 0) {
+//                listItem.remove();
+//                $($currActivePanel).listview("refresh");
+//                $("#rightMenunotificationList").trigger("updatelayout");
+//            }
         }
     }
     catch (err) {

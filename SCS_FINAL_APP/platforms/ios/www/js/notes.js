@@ -1,4 +1,4 @@
-﻿// notes js function //
+// notes js function //
 var caseheading = "";
 
 function shownotes(list)
@@ -182,7 +182,7 @@ caseId = jQuery.grep(caseId, function(value) {
                             //                                                                        var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: updateNote(ajax call)";
                             //                                                                        errMsg = errMsg + "\n App Version : " + version;
                             //                                                                        insertLog(requestTime, responseTime, errMsg, function (returnId) {});
-                            //                                                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                            //                                                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                             //                                                                        $.mobile.loading('hide');
                             //                                                                },
                             //                                                                beforeSend: function () {
@@ -473,7 +473,7 @@ function updateNote(button)
                                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: updateNote(ajax call)";
                                     errMsg = errMsg + "\n App Version : " + version;
                                     insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                     $.mobile.loading('hide');
                                 },
                                 beforeSend: function()
@@ -574,7 +574,7 @@ function Check_serverSync_Data_Note()
                                         var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: Check_serverSync_Data_Note(ajax call)";
                                         errMsg = errMsg + "\n App Version : " + version;
                                         insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                     },
                                     beforeSend: function()
                                     {
@@ -698,7 +698,7 @@ function SyncDatafromServerToDevice_for_Notes()
                                         var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: SyncDatafromServerToDevice_for_Notes(ajax call)";
                                         //errMsg = errMsg + "\n App Version : " + version;
                                         insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                     },
                                     beforeSend: function()
                                     {

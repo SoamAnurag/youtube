@@ -1,4 +1,4 @@
-﻿.ui-link-inherit
+.ui-link-inherit
 {
     font-size: small;
 }
@@ -1223,6 +1223,14 @@ font-size: 12px;
 #ui-st-label2
 {
     text-align: center;margin-right: 0;width: 100%;
+}
+#ui-st-label3
+{
+    text-align: center;margin-right: 0;
+}
+#ui-st-label4
+{
+    text-align: center;margin-right: 0;
 }
 
 .ui-tab-btn

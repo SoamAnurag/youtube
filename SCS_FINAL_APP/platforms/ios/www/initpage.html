@@ -22,6 +22,8 @@
     <script type="text/javascript" charset="utf-8" src="js/ShareCases.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/Stackeholder.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/notes.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/index.js"></script>
+    
     <!--<script type="text/javascript">
         function validateSignupForm() {
             alert("Validation Start");
@@ -81,13 +83,17 @@
             <div data-role="fieldcontain">
                 <h3>
                     For existing user of SCS who already receive sms and emails through our service.</h3>
-                <a href="settings.html" data-role="button" data-icon="star" data-iconpos="top" data-theme="b"
+<!--                <a href="settings.html" data-role="button" data-icon="star" data-iconpos="top" data-theme="b"-->
+<!--                    data-transition="slide">Existing User</a>-->
+                    <a onclick="loginRegister('settings')" data-role="button" data-icon="star" data-iconpos="top" data-theme="b"
                     data-transition="slide">Existing User</a>
             </div>
             <div data-role="fieldcontain">
                 <h3>
                     For new user of SCS register for free trial.</h3>
-                <a href="Signup.html" data-role="button" data-icon="edit" data-iconpos="top" data-theme="a"
+<!--                <a href="Signup.html" data-role="button" data-icon="edit" data-iconpos="top" data-theme="a"-->
+<!--                    data-transition="slide">New User</a>-->
+                <a href="#" onclick="loginRegister('Signup')" data-role="button" data-icon="edit" data-iconpos="top" data-theme="a"
                     data-transition="slide">New User</a>
             </div>
         </div>

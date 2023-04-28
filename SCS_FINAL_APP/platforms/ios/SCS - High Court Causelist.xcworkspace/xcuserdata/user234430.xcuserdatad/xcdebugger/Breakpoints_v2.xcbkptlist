@@ -14,9 +14,41 @@
             filePath = "www/js/scs.main.js"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6835"
-            endingLineNumber = "6835"
+            startingLineNumber = "7097"
+            endingLineNumber = "7097"
             landmarkName = "register_device"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "08E9B96E-A1FD-436C-B4D0-9F3A1BF61022"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "www/js/scs.main.js"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6564"
+            endingLineNumber = "6564"
+            landmarkName = "success"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "017ED64F-A89A-4641-8B31-506B455CC34B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "www/js/scs.main.js"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6566"
+            endingLineNumber = "6566"
+            landmarkName = "success"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

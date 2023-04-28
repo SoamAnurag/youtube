@@ -124,8 +124,8 @@
             document.addEventListener("deviceready", onDeviceReady, false);
             //alert("called");
             //FastClick.attach(document.body);
-
-
+            // your code here to run on URL change
+             $("#advanceSearch").css("display", "block");
         }
         function minimizeMEProgress() {
             $.mobile.activePage.find('#currentProgress').hide();
@@ -216,22 +216,18 @@
                         <h4>
                             <b>Search by Case Number, Party Name, Case status, list name, Date Or Justice Name. ff</b>
                         </h4>
-                        <input type="search" name="search" id="search1" value="" />
+                        <input type="search" name="search" id="search1_a" value="" />
                     </center>
                 </div>
-                <div>
-                    <label>
-                        Start Date
-                    </label>
-<!--                    <input name="start_date" id="start_date" type="text" data-field="date" class="date_picker_textbox form-control" readonly>-->
-                    <input name="start_date" id="start_date_a" type="text" placeholder="dd/mm/yyyy" style="text-align: center" class="date_picker_textbox form-control">
+                <div data-role="fieldcontain">
+                    <label for="start_date_a" id="ui-st-label3">
+                        Start Date</label>
+                    <input name="start_date" id="start_date_a" type="text" placeholder="DD/MM/YYYY" />
                 </div>
-                <div>
-                    <label>
-                        End Date
-                    </label>
-                    <!--<input name="end_date" id="end_date" type="text" data-field="date" class="date_picker_textbox form-control" readonly>-->
-                    <input name="end_date" id="end_date_a" type="text" placeholder="dd/mm/yyyy" style="text-align: center" class="date_picker_textbox form-control">
+                <div data-role="fieldcontain">
+                    <label for="end_date_a" id="ui-st-label4">
+                        End Date</label>
+                    <input name="end_date" id="end_date_a" type="text" placeholder="DD/MM/YYYY" />
                 </div>
             </center>
             <div class="ui-body ui-body-a">

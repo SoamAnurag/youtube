@@ -92,7 +92,7 @@ window.addEventListener('load', function(){
         }
     });
     
-//    FirebasePlugin.getToken(function(fcmToken) {
+//    FirebasePlugin.getToken(function(fcmToken){ 
 //        console.log(fcmToken);
 //        alert(fcmToken);
 //        sendToken(fcmToken);
@@ -104,4 +104,57 @@ window.addEventListener('load', function(){
 //        sendToken(notification);
 //        alert(JSON.stringify(notification))
 //    });
+    $("#advanceSearch").css("display", "none");
 });
+$(window).on('hashchange', function() {
+   // your code here to run on URL change
+    let d = new Date();
+    let month = d.getMonth()+1;
+    let day = d.getDate();
+
+    let output = (day<10 ? '0' : '') + day + '/' + (month<10 ? '0' : '') + month + '/' +d.getFullYear() ;
+    try{
+        if($("#end_date_a").val() == "")
+        $("#end_date_a").val(output);
+    }catch(err){
+        if($("#end_date").val() == "")
+        $("#end_date").val(output);
+    }
+    $("#advanceSearch").css("display", "none");
+    setTimeout(function(){
+        if((window.location.href).includes("advanceSearch")){
+            $("#advanceSearch").css("display", "block");
+        }else{
+            $("#advanceSearch").css("display", "none");
+        }
+    }, 700);
+});
+function hideAdvanceSearchUI() {
+    let d = new Date();
+    let month = d.getMonth()+1;
+    let day = d.getDate();
+
+    let output = (day<10 ? '0' : '') + day + '/' + (month<10 ? '0' : '') + month + '/' +d.getFullYear() ;
+    try{
+        if($("#end_date_a").val() == "")
+        $("#end_date_a").val(output);
+    }catch(err){
+        if($("#end_date").val() == "")
+        $("#end_date").val(output);
+    }
+    $("#advanceSearch").css("display", "none");
+    setTimeout(function(){
+        if((window.location.href).includes("advanceSearch")){
+            $("#advanceSearch").css("display", "block");
+        }else{
+            $("#advanceSearch").css("display", "none");
+        }
+    }, 700);
+}
+let _check = 1;
+loginRegister = (prams) => {
+    if(_check == 1)
+    $.mobile.navigate(prams+".html",{ transition: "none" });
+    $.mobile.navigate(prams+".html",{ transition: "none" });
+    _check++;
+}

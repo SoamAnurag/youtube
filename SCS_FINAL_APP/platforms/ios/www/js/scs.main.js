@@ -4,7 +4,7 @@
 var db;
 if(localStorage.getItem("validateSignupFormPermisson") == null) {
   // Key exists in LocalStorage
-    window.localStorage.setItem("validateSignupFormPermisson", "false");
+    window.localStorage.setItem("validateSignupFormPermisson", "true");
 }
 
 var signupPanelChecker;
@@ -248,14 +248,14 @@ function CallDotReady()
     });
 }
 $(document).on('pagebeforeshow', '#settings', function (event) {
-    var currPage = CheckCurrentPage();
-    if (currPage == "settings") {
-        if (hold_emailid != "") {
-            $('#email_id').val(hold_emailid);
-            hold_emailid = "";
-        }
-    }
-    SMS_Send();
+//    var currPage = CheckCurrentPage();
+//    if (currPage == "settings") {
+//        if (hold_emailid != "") {
+//            $('#email_id').val(hold_emailid);
+//            hold_emailid = "";
+//        }
+//    }
+//    SMS_Send();
    // Get_Gateways();
 });
 
@@ -623,7 +623,7 @@ function onDeviceReady()
         }
         else
         {
-            alert("Cannot reach the server! Please try again after some time. If the problem persist call +918269244088(Mon-Sat, 10AM-7PM) ");
+            alert("Cannot reach the server! Please try again after some time. If the problem persist call 9522300338(Mon-Sat, 10AM-7PM) ");
         }
     });
 }
@@ -1118,7 +1118,7 @@ function onResume()
             }
             else
             {
-                alert("Cannot reach the server! Please try again after some time. If the problem persist call +918269244088(Mon-Sat, 10AM-7PM) ")
+                alert("Cannot reach the server! Please try again after some time. If the problem persist call 9522300338(Mon-Sat, 10AM-7PM) ")
             }
         });
     }
@@ -1241,7 +1241,7 @@ function runOnBrowser()
         }
         else
         {
-            alert("Cannot reach the server! Please try again after some time. If the problem persist call +918269244088(Mon-Sat, 10AM-7PM) ")
+            alert("Cannot reach the server! Please try again after some time. If the problem persist call 9522300338(Mon-Sat, 10AM-7PM) ")
         }
     });
 }
@@ -1334,7 +1334,7 @@ function fetchAndRegisterErrorLogs()
                                             var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: fetchAndRegisterErrorLogs(ajax call)";
                                             errMsg = errMsg + "\n App Version : " + version;
                                             insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                           // alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                           // alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                             calledBeforeSendAnyRequest(function(isConnected)
                                             {
                                                 if (isConnected)
@@ -1491,8 +1491,8 @@ function lookForSettings()
                                     else
                                     {
                                         $.mobile.loading('hide');
-                                        setTimeout(function()
-                                        {
+//                                        setTimeout(function()
+//                                        {
                                             if(signupPanelChecker){
                                                 $.mobile.navigate("initpage.html",
                                                 {
@@ -1504,20 +1504,27 @@ function lookForSettings()
                                                     transition: "slide"
                                                 });
                                             }
-                                        }, 500);
+//                                        }, 500);
                                     }
                                 });
                                 }
                                 else
                                 {
                                     $.mobile.loading('hide');
-                                    setTimeout(function()
-                                    {
-                                        $.mobile.navigate("initpage.html",
-                                        {
-                                            transition: "slide"
-                                        });
-                                    }, 500);
+//                                    setTimeout(function()
+//                                    {
+                                        if(signupPanelChecker){
+                                            $.mobile.navigate("initpage.html",
+                                            {
+                                                transition: "slide"
+                                            });
+                                        }else{
+                                            $.mobile.navigate("settings.html",
+                                            {
+                                                transition: "slide"
+                                            });
+                                        }
+//                                    }, 500);
                                 }
                             }
                             else
@@ -1568,7 +1575,7 @@ function lookForSettings()
             }
             else
             {
-                alert("Cannot reach the server! Please try again after some time. If the problem persist call +918269244088(Mon-Sat, 10AM-7PM) ")
+                alert("Cannot reach the server! Please try again after some time. If the problem persist call 9522300338(Mon-Sat, 10AM-7PM) ")
             }
         });
      }
@@ -1718,7 +1725,7 @@ function silentUpdate(callBack)
                                         var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: silentUpdate(ajax call)";
                                         errMsg = errMsg + "\n App Version : " + version;
                                         insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                         calledBeforeSendAnyRequest(function(isConnected)
                                         {
                                             if (isConnected)
@@ -1806,7 +1813,7 @@ function showUserBlockMessage(message)
                 var isShowOverlay = allData[2].substring(allData[2].indexOf(':'), allData[2].length);
                 var isShowClose = allData[3].substring(allData[3].indexOf(':'), allData[3].length);
                 $('#validityPopUp').fadeIn();
-                $('#innerMsg').html(msg + " Please call +918269244088(Mon-Sat, 10AM-7PM).");
+                $('#innerMsg').html(msg + " Please call 9522300338(Mon-Sat, 10AM-7PM).");
                 if (Number(isShowOverlay) === 1)
                 {
                     $('#overlay').fadeIn();
@@ -2445,7 +2452,7 @@ function validateUsersDeviceAndPassword(callBack)
                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: validateUsersDeviceAndPassword(ajax call)";
                 errMsg = errMsg + "\n App Version : " + version;
                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                //alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                //alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                 if (typeof callBack !== 'undefined')
                 {
                     callBack(false);
@@ -2500,7 +2507,7 @@ function saveSettings()
             {
                 if (isActive.toString() === 'invalid')
                 {
-                    alert('Invalid Username or Password. Please contact +918269244088 to get your PIN');
+                    alert('Invalid Username or Password. Please contact 9522300338 to get your PIN');
                 }
                 else
                 {
@@ -2544,11 +2551,8 @@ function saveSettings()
                                     doRegistrationProcess();
                                     if (settingsSaved = "DONE")
                                     {
-                                        $.mobile.navigate("index.html",
-                                        {
-                                            transition: "slide",
-                                            reverse: true
-                                        });
+                                        $.mobile.navigate("index.html",{transition: "none",reverse: true});
+                                        $.mobile.navigate("index.html",{transition: "none",reverse: true});
                                     }
                                     get_lawyers_info();
                                     drawToast("Settings Saved");
@@ -2911,7 +2915,7 @@ function getCases(callBack)
                                         var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: getCases(ajax call)";
                                         errMsg = errMsg + "\n App Version : " + version;
                                         insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                         calledBeforeSendAnyRequest(function(isConnected)
                                         {
                                             if (isConnected)
@@ -3236,10 +3240,17 @@ $(document).on('pagebeforeshow', '#advanceSearch', function(event, ui)
 //                alert("Oops! Something went worng with db.")
             });
         }, successCB);
-        var search = $('#search1');
-        search.val('');
-        search.trigger("keyup");
-        search.focus();
+        try{
+            var search = $('#search1_a');
+            search.val('');
+            search.trigger("keyup");
+            search.focus();
+        }catch(err){
+            var search = $('#search1');
+            search.val('');
+            search.trigger("keyup");
+            search.focus();
+        }
     }
     catch (err)
     {
@@ -3718,6 +3729,175 @@ function populateCasePage()
         });
     }
 }
+function advanceSearchCallBack(callback)
+{
+    try
+    {
+
+    //Code for push Notification To open Specific Date Case Page
+    if(PrevoisPageAll==""){
+
+    if(NC==1){
+    PrevoisPageAll="casePage";
+    }
+
+            var currentUrl = $(location).attr('href');
+            var currentUrl1 = currentUrl.split("?");
+
+            if (currentUrl1.length >=2){
+            if (currentUrl1[1] == "Notify")
+            {
+
+            }
+            else{
+            if(currentUrl1[1].indexOf("Date") != -1){
+            //alert('date Found');
+            var spltDesh=currentUrl1[1].split('-');
+            var datee=spltDesh[1].split('%20');
+            var CasepageDate=datee[0];
+            //alert(CasepageDate);
+            var datearr=CasepageDate.split('/');
+            var origDate="20"+datearr[2]+"-"+datearr[1]+"-"+datearr[0];
+            //alert(origDate);
+
+            var searchData = {'startDate': origDate};
+            localStorage.setItem('searchData', JSON.stringify(searchData));
+            }
+            else if(currentUrl1[1].indexOf("No%20Listings") != -1){
+            //alert('No Listing Found');
+            var spltDesh=currentUrl1[1].split('in%20');
+            var datee=spltDesh[1].split('%20');
+            var CasepageDate=datee[0];
+            //alert(CasepageDate);
+            var datearr=CasepageDate.split('/');
+            var origDate="20"+datearr[2]+"-"+datearr[1]+"-"+datearr[0];
+            //alert(origDate);
+            var searchData = {'startDate': origDate};
+            localStorage.setItem('searchData', JSON.stringify(searchData));
+            }
+            else{
+
+            }
+
+            }
+
+            }
+            NC=NC+1;
+            }
+            //End code Notification
+        db.transaction(function(tx)
+        {
+            var searchData = JSON.parse(localStorage.getItem("searchData"));
+            var searchString = searchData.searchString;
+            var startDate = searchData.startDate;
+            var endDate = searchData.endDate;
+            var searchStringToShow = 'Showing Result For: ';
+            if (typeof searchString !== 'undefined')
+            {
+                searchStringToShow += searchString + ', ';
+            }
+            if (typeof startDate !== 'undefined')
+            {
+                searchStringToShow += startDate + ', ';
+                if (typeof endDate !== 'undefined')
+                {
+                    searchStringToShow += endDate;
+                }
+            }
+            $("#searchInfoDiv").html(searchStringToShow);
+            if (typeof searchString !== 'undefined' && searchString !== '')
+            {
+                searchString = searchString.replace(/\s/g, '');
+            }
+            var query = 'select court_date_table.court_date_id,court_date_table.start_date,court_date_table.end_date, list_table.list_id,list_table.list_name,list_court_date_table.list_court_date_id,count(DISTINCT case_table.case_id) as case_count from court_date_table join list_court_date_table on list_court_date_table.court_date_id=court_date_table.court_date_id join list_table on list_court_date_table.list_id=list_table.list_id left join case_table on case_table.list_court_date_id=list_court_date_table.list_court_date_id left join case_justice_table on case_table.case_id=case_justice_table.case_id left join justice_table on justice_table.justice_id=case_justice_table.justice_id where 1=1 ';
+            if (typeof startDate !== 'undefined')
+            {
+                if (typeof endDate !== 'undefined')
+                {
+                    query += "And (CASE WHEN end_date='' THEN start_date BETWEEN '" + startDate + "' and '" + endDate + "' ELSE start_date BETWEEN '" + startDate + "' AND '" + endDate + "' OR end_date BETWEEN '" + startDate + "' AND '" + endDate + "' END) ";
+                }
+                else
+                {
+                    query += "And (CASE WHEN end_date='' THEN start_date='" + startDate + "' ELSE '" + startDate + "' BETWEEN start_date AND end_date END) ";
+                }
+            }
+            if (typeof searchString !== 'undefined')
+            {
+                query += " And ((REPLACE(justice_table.justice_name,' ','') like '%" + searchString + "%' or REPLACE(case_justice_table.court_no,' ','') like '%" + searchString + "%')  or (REPLACE(list_table.list_name,' ','') like '%" + searchString + "%')  or (REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(case_table.case_no,'.',''),'/',''),'(',''),')',''),' ',''),'-','') like '%" + searchString + "%')  or (REPLACE(case_table.matter,' ','') like '%" + searchString + "%' or REPLACE(case_table.list_no,' ','') like '%" + searchString + "%' or REPLACE(case_table.party_name,' ','') like '%"
+                    //+ searchString + "%' or REPLACE(case_table.case_no,' ','') like '%"
+                    + searchString + "%')) ";
+            }
+            query += " group by list_court_date_table.list_court_date_id order by  case_count desc,start_date,list_name";
+            tx.executeSql(query, [], function(tx, result)
+            {
+                try
+                {
+                    var dateDropDown = $('#dateDropDown');
+                    dateDropDown.empty();
+                    dateDropDown.selectmenu("refresh");
+                    var len = result.rows.length;
+                    var i = 0;
+                    dateDropDown.append('<option value="all">All Cases</option>');
+                    while (i < len)
+                    {
+                        if (result.rows.item(i).end_date.trim().length == 0)
+                        {
+                            dateDropDown.append('<option value="' + result.rows.item(i).list_court_date_id + '">' + result.rows.item(i).start_date + ' List-' + result.rows.item(i).list_name + ' (' + result.rows.item(i).case_count + ' Case)</option>');
+                        }
+                        else
+                        {
+                            dateDropDown.append('<option value="' + result.rows.item(i).list_court_date_id + '">' + result.rows.item(i).start_date + ' To ' + result.rows.item(i).end_date + ' List-' + result.rows.item(i).list_name + ' (' + result.rows.item(i).case_count + ' Case)</option>');
+                        }
+                        i++;
+                    }
+                    if (i > 0)
+                    {
+                        $('#dateDropDown>option:nth-child(1)').attr('selected', true);
+                        dateDropDown.selectmenu("refresh");
+                        getCasesFromAllTheList();
+                        //                        var listCourtDateId = dateDropDown.val();
+                        //                        getCasesByListCourtDateId(listCourtDateId);
+                    }
+                    else
+                    {
+                        $('#justiceCollapsiblePanel').html('<center><div><h4>No Record To Show.</h4></div></center>');
+                    }
+                    callback('done');
+                }
+                catch (err)
+                {
+                    var errMsg = err + "\nMethod: populateCasePage(jquery) tx1" + "\nError Stack:" + err.stack;
+                    insertErrorLogs(errMsg, function(id)
+                    { //alert("Oops! Something went worng.")
+                    });
+                    callback('error');
+                }
+            }, function(err)
+            {
+                var errMsg = "Error Code: " + err.code + "\nError Message: " + err.message + "\nMethod: populateCasePage(executeSql)";
+                insertErrorLogs(errMsg, function(id)
+                {
+//                    alert("Oops! Something went worng with db.")
+                });
+                $.mobile.loading('hide');
+            });
+        }, function(err)
+        {
+            var errMsg = "Error Code: " + err.code + "\nError Message: " + err.message + "\nMethod: populateCasePage(transaction)";
+            insertErrorLogs(errMsg, function(id)
+            {
+//                alert("Oops! Something went worng with db.")
+            });
+        }, successCB);
+    }
+    catch (err)
+    {
+        var errMsg = err + "\nMethod: populateCasePage12(jquery)" + "\nError Stack:" + err.stack;
+        insertErrorLogs(errMsg, function(id)
+        { //alert("Oops! Something went worng.")
+        });
+    }
+}
 $(document).on('change', '#dateDropDown', function()
 {
     var n = $(this).val();
@@ -3908,7 +4088,8 @@ query+="AND case_table.list_court_date_id=? order by case_table.case_id, justice
                                 data = data + '<p class="ui-menu-button1" style="margin: -7px 0px 6px 9px;font-size:0.90em;"  onclick="toggleMenuBar(' + toggleId + ')" ><img id="syncImage" src="images/icons/ic_setting.png" alt="menu" style="width: 25px;  height: 25px; cursor: pointer;" onclick="toggleMenuBar(' + toggleId + ')"/> <strong style=" color: darkgray; "> Tap Here For Options </strong> </p>';
                                 data = data + '<div class="ui-menu-button" id="' + toggleId + '">';
 
-                                data = data + '<div data-role="footer" class="menu-div ui-grid-d"><div data-role="navbar" data-iconpos="top"><ul ><li><a href="#popupStackholder" onclick="ShlistPrepare(this)" data-rel="popup" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="user" data-position-to="window" data-transition="pop">Client</a></li><li><a href="#" onclick="prepare_caseSearchList(this)"  data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" title="' + caseData[j].case_no + '" data-icon="calendar">Dates</a></li><li><a href="#" id="shareId" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="tag">Share</a></li><li><a href="#" onclick="shownotes(this)" id="note" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="comment">Notes</a></li></ul></div></div>';
+//                                data = data + '<div data-role="footer" class="menu-div ui-grid-d"><div data-role="navbar" data-iconpos="top"><ul ><li><a href="#popupStackholder" onclick="ShlistPrepare(this)" data-rel="popup" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="user" data-position-to="window" data-transition="pop">Client</a></li><li><a href="#" onclick="prepare_caseSearchList(this)"  data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" title="' + caseData[j].case_no + '" data-icon="calendar">Dates</a></li><li><a href="#" id="shareId" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="tag">Share</a></li><li><a href="#" onclick="shownotes(this)" id="note" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="comment">Notes</a></li></ul></div></div>';
+                                data = data + '<div data-role="footer" class="menu-div ui-grid-d"><div data-role="navbar" data-iconpos="top"><ul ><li><a href="#popupStackholder" onclick="ShlistPrepare(this)" data-rel="popup" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="user" data-position-to="window" data-transition="pop">Client</a></li><li><a href="#" id="shareId" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="tag">Share</a></li><li><a href="#" onclick="shownotes(this)" id="note" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="comment">Notes</a></li></ul></div></div>';
 
                                 data = data + '</div>';
                                 data = data + '</li>';
@@ -4142,7 +4323,7 @@ query+="AND case_table.list_court_date_id=? order by case_table.case_id, justice
                                 data = data + '<p class="ui-menu-button1" style=" margin: -7px 0px 6px 9px; " onclick="toggleMenuBar(' + toggleId + ')" ><img id="syncImage" src="images/icons/ic_setting.png" alt="menu" style="width: 25px;  height: 25px; cursor: pointer;" onclick="toggleMenuBar(' + toggleId + ')"/> <strong style=" color: darkgray; "> Tap Here For Options </strong> </p>';
                                 data = data + '<div class="ui-menu-button" id="' + toggleId + '">';
 
-                                data = data + '<div data-role="footer" class="menu-div ui-grid-d"><div data-role="navbar" data-iconpos="top"><ul><li><a href="#popupStackholder" onclick="ShlistPrepare(this)" data-rel="popup" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="user" data-position-to="window" data-transition="pop">Client</a></li><li><a href="#" onclick="prepare_caseSearchList(this)"  data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" title="' + caseData[j].case_no + '" data-icon="calendar">Dates</a></li><li><a href="#" id="shareId" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="tag">Share</a></li><li><a href="#" onclick="shownotes(this)" id="note" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="comment">Notes</a></li></ul></div></div>';
+                                data = data + '<div data-role="footer" class="menu-div ui-grid-d"><div data-role="navbar" data-iconpos="top"><ul><li><a href="#popupStackholder" onclick="ShlistPrepare(this)" data-rel="popup" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="user" data-position-to="window" data-transition="pop">Client</a></li><li><a href="#" onclick="prepare_caseSearchList(this)"  data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" title="' + caseData[j].case_no + '" data-icon="calendar">Dates</a></li><li><a href="#" onclick="shownotes(this)" id="note" data-role="button" data-value="' + caseData[j].case_no + '" data-id="' + caseData[j].case_id + '" data-icon="comment">Notes</a></li></ul></div></div>';
 
                                 data = data + '<div>';
                                 data = data + '</li>';
@@ -5376,7 +5557,7 @@ function parseAndSaveData(data, callBack)
                 insertErrorLogs(errMsg, function(id)
                 { //alert("Oops! Something went worng with db.")
                 });
-                alert("Oops! Somthing went worng.Please contact on +918269244088(Mon-Sat, 10AM-7PM).");
+                alert("Oops! Somthing went worng.Please contact on 9522300338(Mon-Sat, 10AM-7PM).");
             }
             else
             {
@@ -5610,19 +5791,19 @@ function isNumber(n)
               if(Number(isActive)<=0){
                var $currActivePanel = '#' + $.mobile.activePage.attr('id') +'RightPanel';
                    var $lawyerRightPanel = $($currActivePanel);
-                   var listItem= $lawyerRightPanel.find("li:contains('Clear All Case Data')");
-                   if(listItem.length===0 || listItem === 'undefined'){
-                        $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
-                       $( "#rightMenulawyerNames" ).trigger( "updatelayout" );
-                    }
+//                   var listItem= $lawyerRightPanel.find("li:contains('Clear All Case Data')");
+//                   if(listItem.length===0 || listItem === 'undefined'){
+//                        $lawyerRightPanel.append("<li data-theme='c'><a data-icon='false' href='#' onclick='showMessageToClearData()' data-transition='slide'><img src='images/icons/ic_action_recycle.png' class='imgShare ui-img-size ui-li-icon ui-corner-none' style='width:1.8em;'>Clear All Case Data</a> </li>").listview("refresh");
+//                       $( "#rightMenulawyerNames" ).trigger( "updatelayout" );
+//                    }
                 }
                 else{
                    var listItem= $($currActivePanel).find("li:contains('Clear All Case Data')");
-                    if(listItem!=='undefined' && listItem.length>0){
-                        listItem.remove();
-                        $($currActivePanel).listview("refresh");
-                        $( "#rightMenulawyerNames" ).trigger( "updatelayout" );
-                    }
+//                    if(listItem!=='undefined' && listItem.length>0){
+//                        listItem.remove();
+//                        $($currActivePanel).listview("refresh");
+//                        $( "#rightMenulawyerNames" ).trigger( "updatelayout" );
+//                    }
                 }
             });
        }
@@ -6174,7 +6355,11 @@ function putAdvanceSearchData()
                     var min_end_date = result.rows.item(0).min_end_date;
                     if (min_start_date == null || max_start_date == null)
                     {
-                        callSearchWebService();
+                        callSearchWebService(function(){
+                            setTimeout(function(){
+                                hideAdvanceSearchUI();
+                            }, 1000)
+                        });
                     }
                     else
                     {
@@ -6190,6 +6375,8 @@ function putAdvanceSearchData()
                                 var search1 = $('#search_string_Data')[0].children[0].children[1].children[0].value;   //search1[1].value
                                 if (search1 === "")
                                     search1 = $('#search1').val();
+                                if(search1 == "")
+                                    search1 = $('#search1_a').val();
                                 var searchData = {
                                     'searchString': search1,
                                     'startDate': Date.parseExact(txt_start_date.val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'),
@@ -6200,10 +6387,18 @@ function putAdvanceSearchData()
                                 localStorage.setItem('searchData', JSON.stringify(searchData));
                                 populateCasePage();
                                 $.mobile.back();
+                                setTimeout(function(){
+                                    hideAdvanceSearchUI();
+                                }, 500)
                             }
                             else
                             {
-                                callSearchWebService();
+                                callSearchWebService(function(){
+                                    setTimeout(function(){
+                                        hideAdvanceSearchUI();
+                                    }, 500)
+                                });
+                                
                             }
                         }
                     }
@@ -6247,7 +6442,7 @@ function putAdvanceSearchData()
     }
 }
 
-function callSearchWebService()
+function callSearchWebService(callback)
 {
     //setTimeout(function Asif(){
     //alert('called webService Function');
@@ -6257,7 +6452,59 @@ function callSearchWebService()
     //}
     //},10000);
     //var asif=setTimeout(function Asif(){searchCases(Date.parseExact($('#start_date').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'), Date.parseExact($('#end_date').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'));clearInterval(asif); },5000);
-    searchCases(Date.parseExact($('#start_date_a').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'), Date.parseExact($('#end_date_a').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'));
+    try{
+        searchCases(Date.parseExact($('#start_date_a').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'), Date.parseExact($('#end_date_a').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'));
+        setTimeout(function() {
+            recordCount = 0;
+            addCount = 0;
+            var startDate = $('#start_date_a').val();
+            var endDate = $('#end_date_a').val();
+            let search_string_a = $('#search1').val();
+            if(search_string_a == "")
+                search_string_a = $('#search1_a').val()
+            var searchData = {
+                'searchString': search_string_a,
+                'startDate': Date.parseExact(startDate, 'dd/MM/yyyy').toString('yyyy-MM-dd'),
+                'endDate': Date.parseExact(endDate, 'dd/MM/yyyy').toString('yyyy-MM-dd')
+            };
+            localStorage.setItem('searchData', JSON.stringify(searchData));
+            advanceSearchCallBack(function(res){
+                $.mobile.back();
+                $.mobile.loading('hide');
+                setTimeout(function(){
+                    hideAdvanceSearchUI();
+                }, 1000)
+            });
+        }, 1000);
+        setTimeout(function(){
+            hideAdvanceSearchUI();
+        }, 1000)
+        callback();
+    }catch(err){
+        searchCases(Date.parseExact($('#start_date').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'), Date.parseExact($('#end_date').val(), 'dd/MM/yyyy').toString('yyyy-MM-dd'));
+        setTimeout(function() {
+            recordCount = 0;
+            addCount = 0;
+            startDate = $('#start_date').val();
+            endDate = $('#end_date').val();
+            let search_string_a = $('#search1').val();
+            if(search_string_a == "")
+                search_string_a = $('#search1_a').val()
+            var searchData = {
+                'searchString': search_string_a,
+                'startDate': Date.parseExact(startDate, 'dd/MM/yyyy').toString('yyyy-MM-dd'),
+                'endDate': Date.parseExact(endDate, 'dd/MM/yyyy').toString('yyyy-MM-dd')
+            };
+            localStorage.setItem('searchData', JSON.stringify(searchData));
+            advanceSearchCallBack(function(res){
+                $.mobile.back();
+                $.mobile.loading('hide');
+                hideAdvanceSearchUI();
+            });
+        }, 1000);
+        hideAdvanceSearchUI();
+        callback()
+    }
     // launchPiWebWorker();
 }
 
@@ -6279,6 +6526,13 @@ function searchCases(startDate, endDate)
                         var guid = result.rows.item(0).user_id;
                         var url = MR_URL;
                         var webMethod = protocal + url + '/WebService_andriod.asmx/getHistory_Cases';
+                        $.mobile.loading('show',
+                        {
+                            text: 'Loading...',
+                            textVisible: true,
+                            theme: 'b',
+                            textonly: false
+                        });
                         $.ajax(
                         {
                             type: "POST",
@@ -6296,23 +6550,31 @@ function searchCases(startDate, endDate)
                                 isUpdated = false;
                                 var startDate = $('#start_date_a').val();
                                 var endDate = $('#end_date_a').val();
+                                
+                                if(startDate == null || startDate == undefined || startDate == "" || endDate == null || endDate == undefined || endDate == ""){
+                                    startDate = $('#start_date').val();
+                                    endDate = $('#end_date').val();
+
+                                }
+                                
                                 parseAndSaveData(msg.d, function(data)
                                 {
                                     var responseTime = new Date().getTime();
-                                    updateloding(data, recordCount);
+//                                    updateloding(data, recordCount);
                                     if (recordCount == data)
                                     {
                                         recordCount = 0;
                                         addCount = 0;
+                                        let search_string_a = $('#search1').val();
+                                        if(search_string_a == "")
+                                            search_string_a = $('#search1_a').val()
                                         var searchData = {
-                                            'searchString': $('#search1').val(),
+                                            'searchString': search_string_a,
                                             'startDate': Date.parseExact(startDate, 'dd/MM/yyyy').toString('yyyy-MM-dd'),
                                             'endDate': Date.parseExact(endDate, 'dd/MM/yyyy').toString('yyyy-MM-dd')
                                         };
                                         localStorage.setItem('searchData', JSON.stringify(searchData));
-                                        $.mobile.loading('hide');
                                         populateCasePage();
-                                        $.mobile.back();
                                     }
                                 });
                             },
@@ -6323,7 +6585,7 @@ function searchCases(startDate, endDate)
                                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: searchCases(ajax call)";
                                 errMsg = errMsg + "\n App Version : " + version;
                                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 calledBeforeSendAnyRequest(function(isConnected)
                                 {
                                     if (isConnected)
@@ -7037,7 +7299,7 @@ function CheckPrevious_reID_In_Cloud(lawyer_id)
                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: CheckPrevious_reID_In_Cloud(ajax call)";
                     errMsg = errMsg + "\n App Version : " + version;
                     insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                 },
                 beforeSend: function()
                 {
@@ -7373,7 +7635,7 @@ function register_user(reg_id)
                                     if (msg.d == 'EXISTS')
                                     {
                                         settingsSaved = null;
-                                        alert('Mobile number or email already exists. Please contact +918269244088 to get your PIN');
+                                        alert('Mobile number or email already exists. Please contact 9522300338 to get your PIN');
                                         $.mobile.navigate("initpage.html",
                                         {
                                             transition: "slide",
@@ -7434,7 +7696,7 @@ function register_user(reg_id)
                                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: register_user(ajax call)";
                                 errMsg = errMsg + "\n App Version : " + version;
                                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                //alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                //alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 calledBeforeSendAnyRequest(function(isConnected)
                                 {
                                     if (isConnected)
@@ -7703,7 +7965,7 @@ function updateRegistrationIdOnServer(reg_id)
                                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: updateRegistrationIdOnServer(ajax call)";
                                 errMsg = errMsg + "\n App Version : " + version;
                                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 calledBeforeSendAnyRequest(function(isConnected)
                                 {
                                     if (isConnected)
@@ -7812,28 +8074,28 @@ function getSubscriptionDate()
                                             try{
                                                 if (device.platform == 'android' || device.platform == 'Android')
                                                 {
-                                                    $.mobile.activePage.find('#expDate').html('Subscription expires in ' + expDateMsg[1] + '.<br/>Helpline : +918269244088');
-                                                    expDateToShow = 'Subscription expires in ' + expDateMsg[1] + '.<br/>Helpline : +918269244088';
+                                                    $.mobile.activePage.find('#expDate').html('Subscription expires in ' + expDateMsg[1] + '.<br/>Helpline : 9522300338');
+                                                    expDateToShow = 'Subscription expires in ' + expDateMsg[1] + '.<br/>Helpline : 9522300338';
                                                 }
                                                 else if (device.platform == 'iOS' || device.platform == 'IOS' || device.platform == 'ios')
                                                 {
-                                                    $.mobile.activePage.find('#expDate').html('Helpline : +918269244088');
-                                                    expDateToShow = 'Helpline : +918269244088';
+                                                    $.mobile.activePage.find('#expDate').html('Helpline : 9522300338');
+                                                    expDateToShow = 'Helpline : 9522300338';
                                                 }
                                                 else{
-                                                    $.mobile.activePage.find('#expDate').html('Helpline : +918269244088');
-                                                    expDateToShow = 'Helpline : +918269244088';
+                                                    $.mobile.activePage.find('#expDate').html('Helpline : 9522300338');
+                                                    expDateToShow = 'Helpline : 9522300338';
                                                 }
                                                 }
                                                 catch(err){
-                                                    $.mobile.activePage.find('#expDate').html('Helpline : +918269244088');
-                                                    expDateToShow = 'Helpline : +918269244088';
+                                                    $.mobile.activePage.find('#expDate').html('Helpline : 9522300338');
+                                                    expDateToShow = 'Helpline : 9522300338';
                                                 }
                                             }
                                             else
                                             {
-                                                $.mobile.activePage.find('#expDate').html('Subscription ' + expDateMsg[1] + '.<br/>Helpline : +918269244088');
-                                                expDateToShow = 'Subscription ' + expDateMsg[1] + '.<br/>Helpline : +918269244088';
+                                                $.mobile.activePage.find('#expDate').html('Subscription ' + expDateMsg[1] + '.<br/>Helpline : 9522300338');
+                                                expDateToShow = 'Subscription ' + expDateMsg[1] + '.<br/>Helpline : 9522300338';
                                             }
                                             expDate = expDateMsg;
                                             if (Number(display[1]) == 1)
@@ -7857,7 +8119,7 @@ function getSubscriptionDate()
                                                 }
                                                 else
                                                 {
-                                                    $('#innerMsg').html(expiryMsg[1] + " Please call +918269244088(Mon-Sat, 10AM-7PM).");
+                                                    $('#innerMsg').html(expiryMsg[1] + " Please call 9522300338(Mon-Sat, 10AM-7PM).");
                                                 }
                                                 var screenH = $(window).height() / 3;
                                                 var headerH = $('.header').height() + 60;
@@ -7892,7 +8154,7 @@ function getSubscriptionDate()
                                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: GetSubscriptionDate(ajax call)";
                                     errMsg = errMsg + "\n App Version : " + version;
                                     insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                     calledBeforeSendAnyRequest(function(isConnected)
                                     {
                                         if (isConnected)
@@ -8476,7 +8738,7 @@ function getCourtList(callBack)
                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: getCourtList(ajax call)";
                 errMsg = errMsg + "\n App Version : " + version;
                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                 calledBeforeSendAnyRequest(function(isConnected)
                 {
                     if (isConnected)
@@ -8604,7 +8866,7 @@ function validateDevice(callBack)
                 errMsg = errMsg + "\n App Version : " + version;
                     //        alert("Message crash found"+errMsg);
                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                 if (typeof callBack !== 'undefined')
                 {
                     callBack(false);
@@ -8676,7 +8938,7 @@ function feedback()
                     error: function(XMLHttpRequest, textStatus, errorThrown)
                     {
                         $.mobile.loading('hide');
-                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                         calledBeforeSendAnyRequest(function(isConnected)
                         {
                             if (isConnected)
@@ -8803,7 +9065,7 @@ function registerUserForTrial()
                     if (msg.d == 'EXISTS')
                     {
                         settingsSaved = null;
-                        navigator.notification.alert('Mobile number or email already exists. Please contact +918269244088 to get your PIN', function() {}, '', 'Ok');
+                        navigator.notification.alert('Mobile number or email already exists. Please contact 9522300338 to get your PIN', function() {}, '', 'Ok');
                         $.mobile.navigate("initpage.html",
                         {
                             transition: "slide",
@@ -8862,7 +9124,7 @@ function registerUserForTrial()
                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: registerUserForTrial(ajax call)";
                 errMsg = errMsg + "\n App Version : " + version;
                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                 calledBeforeSendAnyRequest(function(isConnected)
                 {
                     if (isConnected)
@@ -9212,7 +9474,7 @@ function hideClearAllButton(callBack)
                             var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: hideClearAllButton(ajax call)";
                             errMsg = errMsg + "\n App Version : " + version;
                             insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                             //calledBeforeSendAnyRequest(function(isConnected){if(isConnected){}});
                             $('#clearBtn').closest('.ui-btn').hide();
                             $('#tabSecond').addClass('ui-border-radius');
@@ -10401,7 +10663,7 @@ $(document).on("pagebeforehide", function(e, data)
 //                                var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: #clearYes(ajax call)";
 //                                errMsg = errMsg + "\n App Version : " + version;
 //                                insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-//                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //                                calledBeforeSendAnyRequest(function(isConnected)
 //                                {
 //                                    if (isConnected)
@@ -10681,7 +10943,7 @@ function AddMapping(list)
                                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: AddMapping(ajax call-InsertCaseMapping)";
                                     errMsg = errMsg + "\n App Version : " + version;
                                     insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 },
                                 beforeSend: function()
                                 {
@@ -10755,7 +11017,7 @@ function AddMapping(list)
                                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: AddMapping(ajax call-DeleteCaseMapping)";
                                     errMsg = errMsg + "\n App Version : " + version;
                                     insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 },
                                 beforeSend: function()
                                 {
@@ -12330,7 +12592,7 @@ function requestForChanges(tx, callBack)
                         var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: requestForChanges(ajax call)";
                         errMsg = errMsg + "\n App Version : " + version;
                         insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                        alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                         calledBeforeSendAnyRequest(function(isConnected)
                         {
                             if (isConnected)
@@ -12666,7 +12928,7 @@ function requestForCaseNumbers(tx, callBack)
                                 var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: requestForCaseNumbers(ajax call)";
                                 errMsg = errMsg + "\n App Version : " + version;
                                 insertLog(requestTime, responseTime, errMsg, function(returnId) {});
-                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                                alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                                 calledBeforeSendAnyRequest(function(isConnected)
                                 {
                                     if (isConnected)
@@ -13212,7 +13474,7 @@ function generateAndSendOtp()
                     if (result.d === 'exceedLimit')
                     {
                         $('#validityPopUp').fadeIn();
-                        $('#innerMsg').html("You have exceeded your max device updation limit. Please contact on +918269244088(Mon-Sat, 10AM-7PM).");
+                        $('#innerMsg').html("You have exceeded your max device updation limit. Please contact on 9522300338(Mon-Sat, 10AM-7PM).");
                     }
                     else
                     {
@@ -13276,7 +13538,7 @@ function reSendOtp()
                 {
                     if (result.d === 'exceedLimit')
                     {
-                        drawToast("You have exceeded your max otp re-send limit. Please contact on +918269244088(Mon-Sat, 10AM-7PM).");
+                        drawToast("You have exceeded your max otp re-send limit. Please contact on 9522300338(Mon-Sat, 10AM-7PM).");
                     }
                     else
                     {
@@ -13569,7 +13831,7 @@ function SetLawyerIdInLocalStorage()
     //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: insertSHCrudIfNotExists(ajax call)";
     //                            errMsg = errMsg + "\n App Version : "+ version;
     //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-    //                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+    //                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
     //
     //                        },
     //                        beforeSend: function () {
@@ -14030,7 +14292,7 @@ $(document).on('pageshow', '#casePage', function()
 //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: UpdateStackeHolderDetail(ajax call)";
 //                            errMsg = errMsg + "\n App Version : "+ version;
 //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //                            //updateSH_server_sync(shId,"0","Update");
 //                            $.mobile.loading('hide');
 //
@@ -14213,6 +14475,9 @@ function getLawyerInfo()
                         dataType: "json",
                         success: function(data)
                         {
+//                            alert(JSON.stringify(data));
+                            let regex_for_date = /(0?[1-9]|[12][0-9]|3[01])\/(0?[1-9]|1[0-2])\/\d{4}\s([01]?[0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])/g;
+                            let regex_for_email = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
                             $.mobile.loading('hide');
                             if (data.d.length > 0)
                             {
@@ -14256,7 +14521,27 @@ function getLawyerInfo()
                                             }
                                             if (lawyerInfo[6] !== '')
                                             {
-                                                court = lawyerInfo[6];
+                                                court = lawyerInfo[lawyerInfo.length-1];
+                                            }
+                                        }
+                                        if(regex_for_date.test(data.d)){
+                                            let subDates = (data.d).match(regex_for_date);
+                                            let date1 =  new Date(Date.parse(subDates[0].split(" ")[0]));
+                                            let date2 =  new Date(Date.parse(subDates[1].split(" ")[0]));
+                                            if(date1.toLocaleTimeString() > date2.toLocaleTimeString()){
+                                                subend = subDates[0];
+                                                substart = subDates[1];
+                                            }else{
+                                                subend = subDates[1];
+                                                substart = subDates[0];
+                                            }
+                                        }
+                                        if(regex_for_email.test(data.d)) {
+                                            let lawyerEmail = (data.d).match(regex_for_email);
+                                            if(lawyerEmail.length > 1) {
+                                                for(let i=0; i<lawyerEmail.length; i++){
+                                                    email += lawyerEmail[i]+", ";
+                                                }
                                             }
                                         }
                                         var info = {
@@ -14975,7 +15260,7 @@ $(document).on('click', '#A1', function(event, ui)
 //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: SyncDatafromServerToDevice_Sh_curd(ajax call)";
 //                            errMsg = errMsg + "\n App Version : "+ version;
 //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //
 //                        },
 //                        beforeSend: function () {
@@ -15057,7 +15342,7 @@ $(document).on('click', '#A1', function(event, ui)
 //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: SyncDatafromServerToDevice_SH_Mapping(ajax call)";
 //                            errMsg = errMsg + "\n App Version : "+ version;
 //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //
 //                        },
 //                        beforeSend: function () {
@@ -15129,7 +15414,7 @@ $(document).on('click', '#A1', function(event, ui)
 //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: CheckSH_serverSync_Data_shCrud(ajax call)";
 //                            errMsg = errMsg + "\n App Version : "+ version;
 //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //
 //                        },
 //                        beforeSend: function () {
@@ -15202,7 +15487,7 @@ $(document).on('click', '#A1', function(event, ui)
 //                            var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: CheckSH_serverSync_Data_SH_Mapping(ajax call)";
 //                            errMsg = errMsg + "\n App Version : "+ version;
 //                            insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+//                            alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
 //
 //                        },
 //                        beforeSend: function () {
@@ -15634,7 +15919,7 @@ function checkexistingcustomer(callBack) {
                         hold_emailid = obj[0].mobile_number;
                         hold_emailid = hold_emailid.substr(-10);
                         hold_lawyer_id = obj[0].lawyer_id;
-                        alert('Mobile number already exists. Please contact +918269244088 to get your PIN');
+                        alert('Mobile number already exists. Please contact 9522300338 to get your PIN');
                         //window.location.href = "settings.html";
                         $.mobile.navigate("settings.html",
                             {
@@ -15653,7 +15938,7 @@ function checkexistingcustomer(callBack) {
                     var errMsg = "Connection Error due to http status : " + XMLHttpRequest.status + "\nText Status : " + textStatus + "\nhttp response : " + XMLHttpRequest.responseText + "\nMethod: getCourtList(ajax call)";
                     errMsg = errMsg + "\n App Version : " + version;
                     insertLog(requestTime, responseTime, errMsg, function (returnId) { });
-                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call +918269244088");
+                    alert("Cannot reach the server! Please check your internet connection. If the problem persist call 9522300338");
                     calledBeforeSendAnyRequest(function (isConnected) {
                         if (isConnected) { }
                     });
