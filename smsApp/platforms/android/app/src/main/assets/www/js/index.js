@@ -7,10 +7,10 @@ var app = {
 		if (typeof (cordova.getAppVersion) != 'undefined') {
 			// cordova-plugin-app-version present
 			var onSuccess = function (version) {
-				$('#app_version').html('App version: ' + version);
+				//$('#app_version').html('App version: ' + version);
 			};
 			cordova.getAppVersion.getVersionNumber(onSuccess);
-			$('#plugin_version').html('Plugin version ' + app.plugin_version);
+			//$('#plugin_version').html('Plugin version ' + app.plugin_version);
 		} else {
 			// cordova-plugin-app-version missing
 			$('#versions').hide();
