@@ -1,6 +1,0 @@
-framework module Pods_SCS___High_Court_Causelist {
-  umbrella header "Pods-SCS - High Court Causelist-umbrella.h"
-
-  export *
-  module * { export * }
-}
